@@ -156,6 +156,12 @@ the necessary fix for required=False attributes, but will also not set the requi
                     {% else %}
                         {{ field(class="form-control-file", **kwargs)|safe }}
                     {% endif %}
+                {% elif field.type == 'SelectField' %}
+                    {% if field.errors %}
+                        {{ field(class="custom-select is-invalid", **kwargs)|safe }}
+                    {% else %}
+                        {{ field(class="custom-select", **kwargs)|safe }}
+                    {% endif %}
                 {% else %}
                     {% if field.errors %}
                         {{ field(class="form-control is-invalid", **kwargs)|safe }}
