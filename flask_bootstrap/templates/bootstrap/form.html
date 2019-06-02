@@ -48,7 +48,7 @@ the necessary fix for required=False attributes, but will also not set the requi
                 <label class="custom-control-label" for="{{ field.id }}">
                     {{ field.label.text|safe }}
                 </label>
-                <small class="form-text text-muted">{{ field.description|safe }}</small>
+                <small class="form-text text-muted mt-0">{{ field.description|safe }}</small>
             </div>
         {% endcall %}
     {%- elif field.type == 'RadioField' -%}
@@ -74,7 +74,7 @@ the necessary fix for required=False attributes, but will also not set the requi
                     </label>
                 </div>
             {% endfor %}
-            <small class="form-text text-muted">{{ field.description|safe }}</small>
+            <small class="form-text text-muted mt-0">{{ field.description|safe }}</small>
         {#% endcall %#}
         {% if form_type == 'horizontal' %}
           </div>
